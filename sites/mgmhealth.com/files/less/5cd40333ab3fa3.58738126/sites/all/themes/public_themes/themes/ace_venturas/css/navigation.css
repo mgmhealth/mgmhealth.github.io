@@ -1,0 +1,153 @@
+.region-top-navigation:after,
+#top-navigation .item-list ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#top-navigation {
+  position: relative;
+  right: 0px;
+  clear: both;
+  height: 30px;
+}
+#top-navigation .item-list {
+  font-size: 0.929em;
+  margin: 0px;
+}
+#top-navigation .item-list ul {
+  padding: 0px;
+}
+#top-navigation .item-list ul.navigator li a {
+  text-align: center;
+}
+#top-navigation .item-list li a.active {
+  border-bottom: none;
+}
+#top-navigation .item-list li {
+  margin: 0 1px;
+}
+#top-navigation .item-list a {
+  display: block;
+  float: left;
+  height: 20px;
+  min-width: 50px;
+  line-height: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-align: left;
+  font-weight: bold;
+}
+.sidebar .has-children > .item-list > ul {
+  min-width: 170px;
+  background: rgba(0,0,0,0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000',endColorstr='#80000000',GradientType=0);
+}
+.sidebar .has-children > .item-list > ul > li {
+  padding: 5px 10px;
+}
+.sidebar .has-children > .item-list > ul > li a {
+  color: #FFF;
+}
+#top-navigation .item-list ul.depth-0 li {
+  margin: 0;
+  padding: 0;
+}
+#top-navigation .has-children > .item-list {
+  z-index: 5;
+}
+#top-navigation .has-children > .item-list > ul {
+  -moz-box-shadow: 0px 0px 7px 0px #555;
+  -webkit-box-shadow: 0px 0px 7px 0px #555;
+  box-shadow: 0px 0px 7px 0px #555;
+  min-width: 170px;
+  max-width: 400px;
+}
+#top-navigation .has-children > .item-list > ul li {
+  width: 100%;
+}
+#top-navigation .has-children > .item-list > ul li a {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: none repeat scroll 0 0 transparent;
+  border-radius: 0 0 0 0;
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  display: block;
+  font-size: 12px;
+  height: auto;
+  padding: 11px 30px 12px 15px;
+  text-transform: none;
+  width: 100%;
+}
+#top-navigation .has-children > .item-list > ul a.first-child .base-arrowspan {
+  height: 100%;
+  width: 30px;
+  background: transparent url(../../../../../../../../../../../all/themes/public_themes/_themes/ace_venturas/images/btn_icon.png) no-repeat 15% center;
+}
+.sidebar .block-widgets-navigator .content {
+  box-shadow: 0px 0px 7px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 0px 7px rgba(0,0,0,0.35);
+  -webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.35);
+}
+.sidebar .block-widgets-navigator .content ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar .block-widgets-navigator .content ul li a {
+  display: block;
+  padding: 11px 10px 8px 10px;
+  border-top: none;
+  font-size: 14px;
+}
+.sidebar .block-widgets-navigator .content ul li a:hover {
+  text-decoration: none !important;
+}
+.sidebar .block-widgets-navigator .content ul li.hovered > a {
+  text-decoration: none !important;
+}
+.sidebar .block-widgets-navigator .content ul li.has-children a.first-child {
+  padding: 11px 30px 8px 10px;
+}
+.sidebar .block-widgets-navigator .content ul li.has-children a.first-child .base-arrowspan {
+  background: url(../../../../../../../../../../../all/themes/public_themes/_themes/ace_venturas/images/btn_icon.png) no-repeat 15% center;
+  height: 100%;
+  width: 30px;
+}
+.sidebar .block-widgets-navigator .content ul li.has-children a:hover,
+.sidebar .block-widgets-navigator .content ul li.has-children.hovered > a {
+  background-position: 95% center;
+}
+.sidebar .block-widgets-navigator .content ul li.first {
+  background-position: 0 -34px;
+}
+.sidebar .block-widgets-navigator .content ul li.first.hover {
+  background-position: 0 1px;
+}
+.sidebar .block-widgets-navigator .content ul li:hover,
+.sidebar .block-widgets-navigator .content ul li.hover {
+  background-position: 0 0;
+}
+.sidebar .block-widgets-navigator .content ul.depth-1 li > a {
+  text-transform: none;
+  font-size: 12px;
+  padding: 10px 10px 9px 10px;
+}
+.sidebar .navigator ul {
+  min-width: 200px;
+  max-width: 400px;
+}
+#top-navigation {
+  position: relative;
+  z-index: 2;
+}
+#footer-wrapper .block-widgets-navigator .navigator li a {
+  background: url(../../../../../../../../../../../all/themes/public_themes/_themes/ace_venturas/images/footer-nav-icon.png) no-repeat 10px 50%;
+  color: #232323;
+  padding: 2px 30px;
+}

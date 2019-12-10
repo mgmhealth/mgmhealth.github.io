@@ -1,0 +1,36 @@
+.cylex-branding {
+  background: #313131;
+  font-family: Arial, Sans-serif;
+  margin: 0 auto;
+}
+.cylex-branding .section {
+  height: 24px;
+  min-height: 0px !important;
+  padding: 13px 10px;
+  width: 940px;
+  margin: 0 auto;
+  text-align: right;
+}
+.cylex-branding .cylex-logo {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  font-size: 14px;
+  background: url(../../../../../../../../../../../all/themes/public_themes/base_kit/base/images/myCYLEX-Logo-sm.png) no-repeat right center;
+  margin: 0;
+  padding: 0 145px 0 0;
+  color: #C1C1C1 !important;
+}
+.cylex-branding .cylex-logo:hover {
+  text-decoration: none !important;
+}
+.i18n-ro .cylex-branding .cylex-logo {
+  background: url(../../../../../../../../../../../all/themes/public_themes/base_kit/base/images/cylex_logo_pagix.png) no-repeat 80% -1px;
+  height: 27px;
+  line-height: 27px;
+}
+.i18n-hu .cylex-branding .cylex-logo {
+  background: url(../../../../../../../../../../../all/themes/public_themes/base_kit/base/images/cylex_logo_clx.png) no-repeat 90% -1px;
+  height: 27px;
+  line-height: 27px;
+}

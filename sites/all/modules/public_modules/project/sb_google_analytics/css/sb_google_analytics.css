@@ -1,0 +1,41 @@
+#sb-google-analytics-ga-main-form {
+  width: 500px;
+}
+
+#sb-google-analytics-ga-main-form #edit-wpid {
+  width: 142px;
+}
+
+#sb-google-analytics-ga-main-form .description {
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+#sb-google-analytics-ga-main-form .description a {
+  color: #3C79D4;
+}
+
+#popup_container.googleanalytics-success input {
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#popup_container.googleanalytics-success #popup_title{
+  font-size: 20px !important;
+}
+
+/*#sb-google-analytics-ga-main-form .form-type-checkbox label{
+  margin-top: -2px;
+}
+
+#sb-google-analytics-ga-main-form .form-item-ckeckall {
+  background: #CACACA;
+  margin-bottom: 0px !important
+}
+
+#sb-google-analytics-ga-main-form .tracklist-wrapper {
+  overflow-y: auto;
+  max-height: 256px;
+}*/

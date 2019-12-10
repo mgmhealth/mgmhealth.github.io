@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(../../../../../../../../../../../all/themes/public_themes/base_kit/base/fonts/SourceSansPro-Regular.html);
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(../../../../../../../../../../../all/themes/public_themes/base_kit/base/fonts/SourceSansPro-Bold.html);
+  font-weight: bold;
+}
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font: inherit;
+}
+#skip-link {
+  display: none;
+}
+#site-name,
+#site-slogan {
+  display: block;
+}
+.item-list ul,
+.item-list ul li {
+  margin: 0;
+  padding: 0;
+}
+.block .content {
+  word-wrap: break-word !important;
+}
+.aloha-content {
+  -webkit-nbsp-mode: normal;
+}
+.aloha-content pre,
+.aloha-title pre {
+  white-space: normal;
+}
+.aloha-content ul,
+.aloha-content ol,
+.aloha-title ul,
+.aloha-title ol {
+  padding-left: 2em;
+  display: block;
+}
+.block-widgets-html-elements-titlewithpictureandparagraph .ajax-upload-container,
+.block-widgets-html-elements-titlewithpictureandparagraph .dr-wrapper,
+.block-widgets-html-elements-title .ajax-upload-container,
+.block-widgets-html-elements-title .dr-wrapper,
+.block-widgets-html-elements-paragraph .ajax-upload-container,
+.block-widgets-html-elements-paragraph .dr-wrapper,
+.block-widgets-html-elements-paragraphwithpicture .ajax-upload-container,
+.block-widgets-html-elements-paragraphwithpicture .dr-wrapper,
+.block-widgets-html-elements-titlewithparagraph .ajax-upload-container,
+.block-widgets-html-elements-titlewithparagraph .dr-wrapper,
+.block-widgets-html-elements-titlewithpicture .ajax-upload-container,
+.block-widgets-html-elements-titlewithpicture .dr-wrapper {
+  z-index: 1;
+  position: relative;
+}
+#site-logo {
+  text-align: left;
+  margin-right: 5px;
+}
+#site-logo > a {
+  text-align: left;
+  position: relative;
+}
+.sidebar {
+  z-index: 2;
+}
+#content {
+  z-index: 1;
+}
+.block-widgets {
+  max-width: 100%;
+}
+table {
+  width: 100%;
+}
+#site-name a,
+.block-widgets-twitter .content a {
+  text-decoration: none;
+}
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+body.site-builder .drag_resize img {
+  cursor: move;
+}
+#page {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.drag_resize img {
+  cursor: default;
+}
+.drag_resize a img {
+  cursor: pointer;
+}
+.messages {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.messages h2 {
+  font-weight: bold;
+}
+.messages ul {
+  list-style: none;
+}
+.messages.status {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.messages.status h2,
+.messages.status p {
+  color: #468847 !important;
+}
+.messages.status a {
+  color: #356635;
+}
+.messages.error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.messages.error h2,
+.messages.error p {
+  color: #b94a48 !important;
+}
+.messages.error a {
+  color: #953b39;
+}
+.messages.warning {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.messages.warning h2,
+.messages.warning p {
+  color: #c09853 !important;
+}
+.messages.warning a {
+  color: #a47e3c;
+}
+#top-navigation {
+  overflow: hidden;
+}
+#top-navigation.all-loaded {
+  overflow: visible;
+}
+body #page .drag_resize,
+body #page .html-elements-picture .content .drag_resize,
+body #page .block-widgets-html-elements-picture .content .drag_resize {
+  padding: 7px;
+  box-shadow: inset 0px 0px 0px 7px #fff, 0px 0px 0px 1px #ccc;
+}
+.cboxPhoto {
+  min-width: 200px !important;
+  height: auto !important;
+}

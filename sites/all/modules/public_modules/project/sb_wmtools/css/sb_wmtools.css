@@ -1,0 +1,19 @@
+#sb-wmtools-main-form {
+	width: 648px;
+}
+
+#sb-wmtools-main-form .description {
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+#sb-wmtools-main-form .description a {
+  color: #3C79D4;
+}
+
+#popup_container.googleanalytics-success input {
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+}

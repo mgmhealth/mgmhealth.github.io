@@ -1,0 +1,10 @@
+body.nobanner #banner-image-wrapper {
+  background: transparent;
+  border: 0px;
+}
+body.nobanner #banner-image-wrapper {
+  display: none;
+}
+body.site-builder #banner-image-wrapper {
+  display: block;
+}

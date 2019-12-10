@@ -1,0 +1,28 @@
+#header-front div.section,
+#header div.section,
+#triptych,
+#footer-columns {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#header-front div.section,
+#header div.section {
+  margin-bottom: 0px;
+}
+#top-navigation .block .content {
+  margin-top: 0px;
+}
+#banner-image-wrapper {
+  margin-top: 10px;
+  width: 950px;
+  position: relative;
+  z-index: 1;
+}
+#site-description {
+  float: right;
+  width: 296px;
+}
+#content-middle {
+  clear: both;
+}

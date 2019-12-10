@@ -1,0 +1,68 @@
+#top-navigation.empty {
+  display: none !important;
+}
+#top-navigation .content ul.depth-0 div.item-list {
+  max-width: 400px !important;
+}
+#top-navigation .item-list li {
+  float: left;
+  list-style: none;
+  margin: 0;
+}
+.block-widgets-navigator {
+  float: none;
+}
+.block-widgets-navigator .content .navigator ul {
+  max-width: 400px;
+}
+.block-widgets-navigator .content .navigator ul li a .base-arrowspan {
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 30px;
+}
+#content .block-widgets-navigator ul.navigator,
+.sidebar .block-widgets-navigator ul.navigator,
+#footer-wrapper .block-widgets-navigator ul.navigator {
+  width: 100%;
+}
+.sidebar .block-widgets-navigator .content .navigator .item-list {
+  max-width: 400px !important;
+}
+.sidebar .block-widgets-navigator .content .navigator li {
+  max-width: 400px !important;
+}
+.sidebar .block-widgets-navigator .content .navigator li a {
+  position: relative;
+  white-space: nowrap;
+  max-width: 400px !important;
+  overflow: hidden;
+}
+.sidebar .block-widgets-navigator .content .navigator li a .base-arrowspan {
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 30px;
+}
+.sidebar .block-widgets-navigator .content .navigator ul {
+  max-width: 400px !important;
+}
+.region-content .block-widgets-navigator .navigator ul,
+.region-footer .block-widgets-navigator .navigator ul {
+  display: none;
+}
+.region-content .block-widgets-navigator a:not([href]),
+.region-footer .block-widgets-navigator a:not([href]) {
+  display: none;
+}
+.region-content .block-widgets-navigator .base-arrowspan,
+.region-footer .block-widgets-navigator .base-arrowspan {
+  display: none;
+}
+#content .block-widgets-navigator .navigator li {
+  line-height: 1.5;
+}

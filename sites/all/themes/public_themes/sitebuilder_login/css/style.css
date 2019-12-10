@@ -1,0 +1,77 @@
+body{
+  background: #364975;
+}
+
+#main-content{
+  width: 360px;
+  margin: 100px auto 0;
+}
+
+#main-content{
+  color: #364975;
+  background: #FFF;
+  padding: 20px;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: black 0 0 7px;
+  -moz-box-shadow: #000 0 0 7px;
+  box-shadow: black 0 0 7px;
+
+  font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+}
+
+#main-content input.form-text{
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  width: 100%;
+
+  padding: 5px;
+  border: 1px solid #DDD;
+  margin: 1px;
+}
+
+#main-content input.form-text.error{
+  border: 2px solid #F00;
+  margin: 0px;
+}
+
+#main-content input:focus{
+  outline: none;
+}
+
+#main-content .description{
+  color: #555;
+  padding: 5px 0;
+}
+
+#skip-link{
+  display: none;
+}
+
+#main-content a,
+#main-content a:visited,
+#main-content a:active,
+#main-content a:focus{
+  color: #2543AB;
+}
+
+#edit-actions{
+  margin-bottom: 0;
+}
+
+#main-content input.form-submit{
+  color: #FFF;
+  font-weight: bold;
+  border: 1px solid #364975;
+  background: #364975;
+
+  -webkit-box-shadow: inset 1px 1px 1px -1px #FFF;
+  -moz-box-shadow: inset 1px 1px 1px -1px #FFF;
+  box-shadow: inset 1px 1px 1px -1px #FFF;
+
+  padding: 5px 10px;
+  cursor: pointer;
+}
