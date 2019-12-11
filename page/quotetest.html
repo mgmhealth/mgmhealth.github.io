@@ -1,6 +1,7 @@
 <html>
 <head>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
         $('#invisible-recaptcha-form').submit(function (event) {
             event.preventDefault();
@@ -8,7 +9,7 @@
             grecaptcha.execute();
         });
         
-        function onSubmit(token) {
+        function formSubmit(token) {
             //document.getElementById("invisible-recaptcha-form").submit();
         }
     </script>    
@@ -26,7 +27,8 @@
         <input type="tel" id="phone" name="phone" pattern="^\d{10}$" required maxlength="10"/>
         <input type="hidden" name="_gotcha"></input>
         </br>
-        <button class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Submit</button>
+        <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="formSubmit" data-size="invisible"></div>
+        <button type="Submit">Submit</button>
     </form>
 </body>
 
