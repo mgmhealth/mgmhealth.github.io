@@ -13,11 +13,13 @@
                 if (!document.getElementById('fullname').value) {
                     alert("You must add text to the required field");
                 } else {
+                    alert("Captcha execute!");
                     grecaptcha.execute();
                 }
             }
 
             function onload() {
+                alert("On load");
                 var element = document.getElementById('submit');
                 element.onclick = validate;
             }
