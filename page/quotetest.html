@@ -2,7 +2,7 @@
 <head>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-        $('#form-contact').submit(function (event) {
+        $('invisible-recaptcha-form').submit(function (event) {
             event.preventDefault();
             grecaptcha.reset();
             grecaptcha.execute();
