@@ -4,38 +4,31 @@
 
         <script type="text/javascript">
             function onSubmit(token) {
-                var myForm = document.getElementById('myForm');
-                alert(myForm);
-                myForm.submit();
+                document.getElementById("invisible-recaptcha-form").submit();
             }
 
-            function validate(event) {
-                event.preventDefault();
-                if (!document.getElementById('fullname').value) {
-                    return false;
-                } else {
-                    grecaptcha.execute();
-                }
-            }
-
-
-        </script>    
+       </script>    
         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <form id="myForm" name="myForm" action="https://usebasin.com/f/037cb927a8a0" method="POST">
-        <label for="fullname">Name</label>
-        <input type="text" id="fullname" name="fullname" required maxlength="50"/>
-        </br>
-        <label for="email-address">Email Address</label>
-        <input type="email" id="email" name="email" required maxlength="40"/>
-        </br>
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" pattern="^\d{10}$" required maxlength="10"/>
+    <form id="invisible-recaptcha-form" action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
+        <p>
+            <label for="fullname">Name</label>
+            <input type="text" id='fullname' name="fullname" required maxlength="50"/>
+        </p>
+        <p>
+            <label for="email-address">Email Address</label>
+            <input type="email" id='email-address' name="email-address" required maxlength="40"/>
+        </p>
+        <p>
+            <label for="phone-number">Phone</label>
+            <input type="tel" id='phone-number' name="phone-number" pattern="^\d{10}$" required maxlength="10"/>
+        </p>
+        <p>
+            <div id='recaptcha' class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible" ></div>
+        </p>
+        <input id="btnSubmit" name="btnSubmit" type="submit" value="Submit"/>
         <input type="hidden" name="_gotcha" />
-        </br>
-        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible" data-badge="inline"></div>
-        <input id="btnSubmit" name="btnSubmit" type="submit" onclick="validate" value="Submit"/>
     </form>
 </body>
 </html>
