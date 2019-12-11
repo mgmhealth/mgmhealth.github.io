@@ -4,7 +4,7 @@
 
         <script type="text/javascript">
             function onSubmit(token) {
-                alert('thanks ' + document.getElementById('field').value);
+                alert('thanks ' + document.getElementById('fullname').value);
             }
 
             function validate(event) {
@@ -15,6 +15,11 @@
                 } else {
                     grecaptcha.execute();
                 }
+            }
+
+            function onload() {
+                var element = document.getElementById('submit');
+                element.onclick = validate;
             }
         </script>    
         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -32,7 +37,8 @@
         <input type="hidden" name="_gotcha" />
         </br>
         <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible" data-badge="inline"></div>
-        <button id="submit" onclick="validate">Submit</button>
+        <button id="submit">Submit</button>
     </form>
+    <script>onload();</script>
 </body>
 </html>
