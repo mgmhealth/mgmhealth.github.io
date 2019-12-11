@@ -1,22 +1,24 @@
 <html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-        $('#invisible-recaptcha-form').submit(function (event) {
-            event.preventDefault();
-            grecaptcha.reset();
-            grecaptcha.execute();
-        });
-        
-        function formSubmit(token) {
-            //document.getElementById("invisible-recaptcha-form").submit();
-        }
-    </script>    
+        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>    
+        <script type="text/javascript">
+            $('#myForm').submit(function(event) {
+                console.log('validation completed.');
+
+                event.preventDefault(); //prevent form submit before captcha is completed
+                grecaptcha.execute();
+            });
+
+            onCompleted = function() {
+                console.log('captcha completed.');
+            }
+        </script>    
 
 </head>
 <body>
-    <form id="invisible-recaptcha-form" action="https://usebasin.com/f/037cb927a8a0" method="POST">
+    <form id="myForm" action="https://usebasin.com/f/037cb927a8a0" method="POST">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required maxlength="50"/>
         </br>
@@ -25,9 +27,9 @@
         </br>
         <label for="phone">Phone</label>
         <input type="tel" id="phone" name="phone" pattern="^\d{10}$" required maxlength="10"/>
-        <input type="hidden" name="_gotcha"></input>
+        <input type="hidden" name="_gotcha" />
         </br>
-        <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="formSubmit" data-size="invisible"></div>
+        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onCompleted" data-size="invisible"></div>
         <button type="Submit">Submit</button>
     </form>
 </body>
