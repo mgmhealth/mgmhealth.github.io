@@ -2,6 +2,12 @@
 <head>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
+        $('#form-contact').submit(function (event) {
+            event.preventDefault();
+            grecaptcha.reset();
+            grecaptcha.execute();
+        });
+        
         function onSubmit(token) {
             document.getElementById("invisible-recaptcha-form").submit();
         }
