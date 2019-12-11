@@ -4,27 +4,21 @@
 
         <script type="text/javascript">
             function onSubmit(token) {
-                alert('thanks ' + document.getElementById('fullname').value);
-                //document.getElementById('myForm').submit();
+                var myForm = document.getElementById('myForm');
+                alert(myForm);
+                myForm.submit();
             }
 
             function validate(event) {
-                alert("In validate");
                 event.preventDefault();
                 if (!document.getElementById('fullname').value) {
-                    alert("You must add text to the required field");
+                    return false;
                 } else {
-                    alert("Captcha execute!");
-                    grecaptcha.reset();
                     grecaptcha.execute();
                 }
             }
 
-            function onload() {
-                alert("On load");
-                var element = document.getElementById('submit');
-                element.onclick = validate;
-            }
+
         </script>    
         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -41,8 +35,7 @@
         <input type="hidden" name="_gotcha" />
         </br>
         <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible" data-badge="inline"></div>
-        <button id="submit">Submit</button>
+        <input id="btnSubmit" name="btnSubmit" type="submit" onclick="validate" value="Submit"/>
     </form>
-    <script>onload();</script>
 </body>
 </html>
