@@ -7,6 +7,11 @@
                 document.getElementById("invisible-recaptcha-form").submit();
             }
 
+            function validateForm() {
+                if (!document.getElementById("fullanme").value) {
+                    event.preventDefault();
+                }
+            }
        </script>    
         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -25,9 +30,9 @@
             <input type="tel" id='phone-number' name="phone-number" pattern="^\d{10}$" required maxlength="10"/>
         </p>
         <p>
-            <div id='recaptcha' class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible" ></div>
+            <button id='recaptcha' class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible">Submit</button>
         </p>
-        <button id="btnSubmit" name="btnSubmit" type="submit" value="Submit"/>
+        <!--<input id="btnSubmit" name="btnSubmit" type="submit" value="Submit"/>-->
         <input type="hidden" name="_gotcha" />
     </form>
 </body>
