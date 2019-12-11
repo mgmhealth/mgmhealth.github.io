@@ -5,7 +5,7 @@
         <script type="text/javascript">
             function onSubmit(token) {
                 alert('thanks ' + document.getElementById('fullname').value);
-                document.getElementById('myForm').submit();
+                //document.getElementById('myForm').submit();
             }
 
             function validate(event) {
@@ -15,6 +15,7 @@
                     alert("You must add text to the required field");
                 } else {
                     alert("Captcha execute!");
+                    grecaptcha.reset();
                     grecaptcha.execute();
                 }
             }
