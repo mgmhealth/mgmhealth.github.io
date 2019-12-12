@@ -110,7 +110,21 @@
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
         function onSubmit(token) {
-            document.getElementById("contact-form-3").submit();
+            document.getElementById("invisible-recaptcha-form").submit();
+        }
+
+        function validate(event) {
+            if (document.getElementById("invisible-recaptcha-form").checkValidity()) {
+                grecaptcha.execute();
+            } else {
+                document.getElementById("invisible-recaptcha-form").reportValidity();
+                event.preventDefault();
+            }
+        }
+
+        function onload() {
+            var element = document.getElementById("mysubmit");
+            element.onclick = validate;
         }
     </script>    
     <script type="text/javascript">
@@ -338,23 +352,25 @@ also include : </u></p>
                                                 <div id="block-widgets-contact_form:3" class="block block-widgets sortable-block block-widgets-contact-form" style="margin-top: 45px;margin-left: 8px;margin-right: 8px;margin-bottom: 8px;">
 
                                                     <div class="content">
-                                                        <form action="https://usebasin.com/f/037cb927a8a0" method="post" id="contact-form-3" accept-charset="UTF-8">
+                                                            <form id="invisible-recaptcha-form" action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
                                                             <div>
                                                                 <div class="form-item form-type-textfield">
-                                                                    <label for="Name">Name <span class="form-required" title="This field is required.">*</span></label>
-                                                                    <input class="contact-form form-text required" id="Name" name="Name" placeholder="Name *" type="text" maxlength="128" required/>
+                                                                    <label for="Name">Name *</label>
+                                                                    <input id="Name" name="Name" placeholder="Name *" type="text" maxlength="128" required/>
                                                                 </div>
                                                                 <div class="form-item form-type-textfield form-item-email">
-                                                                    <label for="email">Email <span class="form-required" title="This field is required.">*</span></label>
-                                                                    <input class="contact-form-3 contact-form cf-email form-text required" id="email" name="email" placeholder="Email *" type="email" maxlength="128" required/>
+                                                                    <label for="email">Email *</label>
+                                                                    <input id="email" name="email" placeholder="Email *" type="email" maxlength="128" required/>
                                                                 </div>
                                                                 <div class="form-item form-type-textfield form-item-phone">
-                                                                    <label for="phone">Phone <span class="form-required" title="This field is required.">*</span></label>
-                                                                    <input class="contact-form-3 contact-form cf-phone form-text required" id="phone" name="phone" placeholder="Phone *" type="tel" maxlength="128" required pattern="^\d{10}$" />
+                                                                    <label for="phone">Phone *</label>
+                                                                    <input id="phone" name="phone" placeholder="Phone *" type="tel" maxlength="128" required pattern="^\d{10}$" />
                                                                 </div>
                                                                 <div class="form-item form-type-textarea form-item-message">
-                                                                    <label for="message">Message <span class="form-required" title="This field is required.">*</span></label>
-                                                                    <div class="form-textarea-wrapper resizable"><textarea class="contact-form-3 contact-form cf-message form-textarea required" id="message" name="message" placeholder="Message *" cols="60" rows="5" required></textarea></div>
+                                                                    <label for="message">Message *</label>
+                                                                    <div class="form-textarea-wrapper resizable">
+                                                                        <textarea id="message" name="message" placeholder="Message *" cols="60" rows="5" required></textarea>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="form-item form-type-checkbox form-item-privacy">
                                                                     <input class="contact-form-3 contact-form cf-privacy form-checkbox required" id="ct_f_privacy_3" name="privacy" type="checkbox" value="1" required/> <label class="option" for="privacy">
@@ -362,14 +378,15 @@ also include : </u></p>
 I consent to MGM Health collecting this personal information for contact purposes only.</font></span> <span class="form-required" title="This field is required.">*</span></label>
 
                                                                 </div>
+                                                                <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible" data-badge="inline"></div>
                                                                 <span class="c-f-submit-wrapper">
-                                                                    <button class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Submit</button>
-                                                                    <!--<input type="button" id="c-f-ajax-submit-3" value="Submit" class="c-f-ajax-submit-btn"/>-->
+                                                                    <input type="button" id="mysubmit" name="mysubmit" value="Submit"></button>
                                                                 </span>
                                                                 <span class="c-f-success-msg-wrapper"></span>
                                                                 <input type="hidden" name="_gotcha" />
                                                             </div>
                                                         </form>
+                                                        <script>onload();</script>
                                                     </div>
                                                 </div>
                                             </li>
