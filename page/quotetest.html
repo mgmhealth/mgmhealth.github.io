@@ -7,9 +7,11 @@
         }
 
         function validate(event) {
-            event.preventDefault();
             if (document.getElementById("invisible-recaptcha-form").checkValidity()) {
                 grecaptcha.execute();
+            } else {
+                document.getElementById("invisible-recaptcha-form").reportValidity();
+                event.preventDefault();
             }
         }
 
@@ -22,9 +24,20 @@
 </head>
 
 <body>
-        <form id="invisible-recaptcha-form" action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
-        <label for="field">Name (required)</label>
-        <input id="field" name="field" required/>
+    <form id="invisible-recaptcha-form" action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
+        <p>
+            <label for="fullname">Name</label>
+            <input type="text" id='fullname' name="fullname" required maxlength="50"/>
+        </p>
+        <p>
+            <label for="email-address">Email Address</label>
+            <input type="email" id='email-address' name="email-address" required maxlength="40"/>
+        </p>
+        <p>
+            <label for="phone-number">Phone</label>
+            <input type="tel" id='phone-number' name="phone-number" pattern="^\d{10}$" required maxlength="10"/>
+        </p>
+        <p>
         <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible"></div>
         <input type="button" id="mysubmit" name="mysubmit" value="Submit"></button>
     </form>
