@@ -1,38 +1,36 @@
 <html>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
-        <script type="text/javascript">
-            function onSubmit(token) {
-                document.getElementById("invisible-recaptcha-form").submit();
+    <script>
+        function onSubmit(token) {
+            alert('thanks ' + document.getElementById('field').value);
+        }
+
+        function validate(event) {
+            event.preventDefault();
+            if (!document.getElementById('field').value) {
+                return false;
+            } else {
+                grecaptcha.execute();
             }
-            
-            function validateForm(event) {
-                var isValid = document.forms[0].checkValidity();
-                if (!isValid) {
-                    event.preventDefault();
-                } 
-            }
-       </script>    
-        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+        }
+
+        function onload() {
+            var element = document.getElementById('submit');
+            element.onclick = validate;
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
-    <form id="invisible-recaptcha-form" action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8" onsubmit="validateForm()">
-        <p>
-            <label for="fullname">Name</label>
-            <input type="text" id='fullname' name="fullname" required maxlength="50"/>
-        </p>
-        <p>
-            <label for="email-address">Email Address</label>
-            <input type="email" id='email-address' name="email-address" required maxlength="40"/>
-        </p>
-        <p>
-            <label for="phone-number">Phone</label>
-            <input type="tel" id='phone-number' name="phone-number" pattern="^\d{10}$" required maxlength="10"/>
-        </p>
-        <p>
-            <button id='recaptcha' class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible">Submit</button>
-        </p>
-        <input type="hidden" name="_gotcha" />
+    <form>
+        Name: (required) <input id="field" name="field required>
+        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit"
+            data-size="invisible"></div>
+        <button id="submit">submit</button>
     </form>
+    <script>onload();</script>
 </body>
+
 </html>
