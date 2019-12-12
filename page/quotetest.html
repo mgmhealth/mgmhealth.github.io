@@ -3,18 +3,18 @@
 <head>
     <script>
         function onSubmit(token) {
-            document.forms[0].submit();
+            document.getElementById("invisible-recaptcha-form").submit();
         }
 
         function validate(event) {
             event.preventDefault();
-            if (document.forms[0].checkValidity()) {
+            if (document.getElementById("invisible-recaptcha-form").checkValidity()) {
                 grecaptcha.execute();
             }
         }
 
         function onload() {
-            var element = document.getElementById("submit");
+            var element = document.getElementById("mysubmit");
             element.onclick = validate;
         }
     </script>
@@ -22,11 +22,11 @@
 </head>
 
 <body>
-    <form action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
+        <form id="invisible-recaptcha-form" action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
         <label for="field">Name (required)</label>
         <input id="field" name="field" required/>
         <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible"></div>
-        <button id="submit">submit</button>
+        <button id="mysubmit" name="mysubmit">submit</button>
     </form>
     
     <script>onload();</script>
