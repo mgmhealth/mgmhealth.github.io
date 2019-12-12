@@ -4,11 +4,7 @@
         <script type="text/javascript">
             var isValid;
             function onSubmit(token) {
-                if(isValid) {
-                    document.getElementById("invisible-recaptcha-form").submit();
-                } else {
-                    grecaptcha.reset();
-                }
+                document.getElementById("invisible-recaptcha-form").submit();
             }
             
             function validateForm() {
