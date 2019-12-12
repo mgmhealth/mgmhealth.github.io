@@ -110,14 +110,14 @@
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
         function onSubmit(token) {
-            document.getElementById("invisible-recaptcha-form").submit();
+            document.getElementById("contact-form-3").submit();
         }
 
         function validate(event) {
-            if (document.getElementById("invisible-recaptcha-form").checkValidity()) {
+            if (document.getElementById("contact-form-3").checkValidity()) {
                 grecaptcha.execute();
             } else {
-                document.getElementById("invisible-recaptcha-form").reportValidity();
+                document.getElementById("contact-form-3").reportValidity();
                 event.preventDefault();
             }
         }
@@ -352,7 +352,7 @@ also include : </u></p>
                                                 <div id="block-widgets-contact_form:3" class="block block-widgets sortable-block block-widgets-contact-form" style="margin-top: 45px;margin-left: 8px;margin-right: 8px;margin-bottom: 8px;">
 
                                                         <div class="content">
-                                                                <form id="invisible-recaptcha-form" action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
+                                                                <form id="contact-form-3" action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
                                                                 <div>
                                                                     <div class="form-item form-type-textfield">
                                                                         <label for="Name">Name *</label>
