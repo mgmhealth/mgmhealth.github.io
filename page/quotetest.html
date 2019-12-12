@@ -2,18 +2,15 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
         <script type="text/javascript">
-            var isValid;
             function onSubmit(token) {
                 document.getElementById("invisible-recaptcha-form").submit();
             }
             
             function validateForm() {
-                isValid = document.forms[0].checkValidity();
+                var isValid = document.forms[0].checkValidity();
                 if (!isValid) {
                     event.preventDefault();
-                } else {
-                    grecaptcha.execute();
-                }
+                } 
             }
        </script>    
         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
