@@ -1,18 +1,22 @@
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-
         <script type="text/javascript">
+            var isValid;
             function onSubmit(token) {
-                
-                document.getElementById("invisible-recaptcha-form").submit();
+                if(isValid) {
+                    document.getElementById("invisible-recaptcha-form").submit();
+                } else {
+                    grecaptcha.reset();
+                }
             }
-
-            function validateForm(ev) {
-                var isValid = document.forms[0].checkValidity();
+            
+            function validateForm() {
+                isValid = document.forms[0].checkValidity();
                 if (!isValid) {
-                    ev.preventDefault();
-                    //grecaptcha.reset();
+                    event.preventDefault();
+                } else {
+                    grecaptcha.execute();
                 }
             }
        </script>    
@@ -33,9 +37,8 @@
             <input type="tel" id='phone-number' name="phone-number" pattern="^\d{10}$" required maxlength="10"/>
         </p>
         <p>
-            <button id='recaptcha' class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible" onclick="validateForm">Submit</button>
+            <button id='recaptcha' class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible" onclick="validateForm()">Submit</button>
         </p>
-        <!--<input id="btnSubmit" name="btnSubmit" type="submit" value="Submit"/>-->
         <input type="hidden" name="_gotcha" />
     </form>
 </body>
