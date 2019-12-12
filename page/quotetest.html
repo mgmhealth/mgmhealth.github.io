@@ -3,20 +3,18 @@
 <head>
     <script>
         function onSubmit(token) {
-            alert('thanks ' + document.getElementById('field').value);
+            alert("thanks " + document.getElementById("field").value);
         }
 
         function validate(event) {
             event.preventDefault();
-            if (!document.getElementById('field').value) {
-                return false;
-            } else {
+            if (document.getElementById("field").value) {
                 grecaptcha.execute();
             }
         }
 
         function onload() {
-            var element = document.getElementById('submit');
+            var element = document.getElementById("submit");
             element.onclick = validate;
         }
     </script>
@@ -24,10 +22,9 @@
 </head>
 
 <body>
-    <form>
-        Name: (required) <input id="field" name="field required>
-        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit"
-            data-size="invisible"></div>
+    <form action="https://usebasin.com/f/037cb927a8a0" method="POST" accept-charset="UTF-8">
+        <label for="field">Name (required)</label><input id="field" name="field" required>
+        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible"></div>
         <button id="submit">submit</button>
     </form>
     <script>onload();</script>
