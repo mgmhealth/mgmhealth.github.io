@@ -3,12 +3,12 @@
 <head>
     <script>
         function onSubmit(token) {
-            alert("thanks " + document.getElementById("field").value);
+            document.forms[0].submit();
         }
 
         function validate(event) {
             event.preventDefault();
-            if (document.getElementById("field").value) {
+            if (document.forms[0].checkValidity()) {
                 grecaptcha.execute();
             }
         }
@@ -27,7 +27,7 @@
         <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback="onSubmit" data-size="invisible"></div>
         <button id="submit">submit</button>
     </form>
+    
     <script>onload();</script>
 </body>
-
 </html>
