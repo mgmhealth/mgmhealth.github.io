@@ -27,7 +27,7 @@
         var css = '';
 
         $.ajax({
-          url: '/content_manager/ajax/load_fonts',
+          url: 'http://www.mgmhealth.com/content_manager/ajax/load_fonts',
           data: {
             fonts: fonts
           },
