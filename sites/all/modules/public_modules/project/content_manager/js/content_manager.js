@@ -26,7 +26,7 @@
 
         var css = '';
 
-        $.ajax({
+        /*$.ajax({
           url: 'http://www.mgmhealth.com/content_manager/ajax/load_fonts',
           data: {
             fonts: fonts
@@ -39,7 +39,7 @@
               $('head title').after(css);
             }
           }
-        });
+        });*/
       }
     },
 
